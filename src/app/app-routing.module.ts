@@ -9,10 +9,6 @@ const routes: Routes = [
     path: 'Home',
     component: HomeComponent
   },
-  {
-    path: 'crear-item',
-    component: CreateItemComponent
-  },
   { path:'**',redirectTo: '/Home',}
 
 ];

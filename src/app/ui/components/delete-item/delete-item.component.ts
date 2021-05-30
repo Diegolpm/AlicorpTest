@@ -4,16 +4,16 @@ import { ToastrService } from 'ngx-toastr';
 import { ItemsService } from 'src/app/data/services/items.service';
 
 @Component({
-  selector: 'app-confirm',
-  templateUrl: './confirm.component.html',
-  styleUrls: ['./confirm.component.scss']
+  selector: 'app-delete-item',
+  templateUrl: './delete-item.component.html',
+  styleUrls: ['./delete-item.component.scss']
 })
-export class ConfirmComponent implements OnInit {
+export class DeleteItemComponent implements OnInit {
 
   item: string;
 
   constructor(
-    public dialogRef: MatDialogRef<ConfirmComponent>,
+    public dialogRef: MatDialogRef<DeleteItemComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private itemService: ItemsService,
     private toastr: ToastrService

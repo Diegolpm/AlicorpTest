@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,12 +15,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreateItemComponent } from './ui/components/create-item/create-item.component';
 import { HeaderComponent } from './ui/common/header/header.component';
 import { ListItemComponent } from './ui/components/list-item/list-item.component';
-import { ConfirmComponent } from './ui/modals/confirm/confirm.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from './ui/common/footer/footer.component';
 import { PaginatePipe } from './ui/common/pipes/paginate.pipe';
 import { EditItemComponent } from './ui/components/edit-item/edit-item.component';
+import { DeleteItemComponent } from './ui/components/delete-item/delete-item.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +29,10 @@ import { EditItemComponent } from './ui/components/edit-item/edit-item.component
     CreateItemComponent,
     HeaderComponent,
     ListItemComponent,
-    ConfirmComponent,
     FooterComponent,
     PaginatePipe,
-    EditItemComponent
+    EditItemComponent,
+    DeleteItemComponent
   ],
   imports: [
     BrowserModule,

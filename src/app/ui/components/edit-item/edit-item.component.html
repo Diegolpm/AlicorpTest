@@ -1,7 +1,7 @@
 <div class="title">
-    <h3 mat-dialog-title class="text-left mb-0">Editar</h3>
+    <h3 mat-dialog-title class="text-left mb-0">Editar Item</h3>
 </div>
-<div class="modal-btn-close position-absolute" style="margin-top:-35px;margin-left: 260px;">
+<div class="modal-btn-close" style="margin-top:-35px;float: right;">
     <button mat-icon-button color="" [mat-dialog-close]="" aria-label="Example icon-button with a heart icon"
         style="z-index: 9; color: white;">
         <mat-icon (click)="close()">close</mat-icon>
@@ -9,7 +9,7 @@
 </div>
 <div mat-dialog-content>
     <!-- <p>What's your favorite animal?</p> -->
-    <form [formGroup]="editItemForm">
+    <form [formGroup]="editItemForm" class="mt-5">
         <mat-form-field class="full-width px-5">
             <mat-label>Nombre</mat-label>
             <input matInput formControlName="name">
@@ -18,7 +18,7 @@
         <br>
         <mat-form-field class="full-width px-5">
             <mat-label>Descripción</mat-label>
-            <textarea  matInput formControlName="description"></textarea>
+            <textarea matInput formControlName="description"></textarea>
             <!-- <input matInput [(ngModel)]="item.description"> -->
         </mat-form-field>
     </form>

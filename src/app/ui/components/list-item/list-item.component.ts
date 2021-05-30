@@ -4,10 +4,11 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ItemsService } from 'src/app/data/services/items.service';
-import { ConfirmComponent } from '../../modals/confirm/confirm.component';
 import { map } from 'rxjs/operators';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EditItemComponent } from '../edit-item/edit-item.component';
+import { CreateItemComponent } from '../create-item/create-item.component';
+import { DeleteItemComponent } from '../delete-item/delete-item.component';
 
 @Component({
   selector: 'app-list-item',
@@ -67,7 +68,7 @@ export class ListItemComponent implements OnInit, AfterViewInit {
 
   deleteItem(key) {
     // console.log(key)
-    const dialogRef = this.dialog.open(ConfirmComponent, {
+    const dialogRef = this.dialog.open(DeleteItemComponent, {
       width: '300px',
       height: '200px',
       data: {
@@ -80,10 +81,25 @@ export class ListItemComponent implements OnInit, AfterViewInit {
     });
   }
 
-  handlePage(e: PageEvent){
+  handlePage(e: PageEvent) {
     this.page_size = e.pageSize;
     this.page_number = e.pageIndex + 1;
   }
+
+  addItem() {
+    const dialogRef = this.dialog.open(CreateItemComponent, {
+      width: '500px',
+      height: '300px',
+      // data: {
+      //   item: item
+      // }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
 
   editItem(item) {
     // console.log(key)

@@ -1,7 +1,7 @@
 <div class="title">
     <h3 mat-dialog-title class="text-left mb-0">Confirmación</h3>
 </div>
-<div class="modal-btn-close position-absolute" style="margin-top:-35px;margin-left: 260px;">
+<div class="modal-btn-close" style="margin-top:-35px;float: right;">
     <button mat-icon-button color="" [mat-dialog-close]="" aria-label="Example icon-button with a heart icon"
         style="z-index: 9; color: white;">
         <mat-icon (click)="close()">close</mat-icon>
@@ -12,5 +12,6 @@
     <p class="text-center">¿Estás seguro que desea eliminar este registro?</p>
 </div>
 <div mat-dialog-actions>
-    <button class="mx-auto btn-alicorp" mat-raised-button cdkFocusInitial (click)="confirmeDeleteItem()">Aceptar</button>
+    <button class="mx-auto btn-alicorp" mat-raised-button cdkFocusInitial
+        (click)="confirmeDeleteItem()">Aceptar</button>
 </div>

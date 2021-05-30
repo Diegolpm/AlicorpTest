@@ -42,7 +42,7 @@ mat-footer-row,
 }
 
 .mat-column-description {
-    // font-style: italic;
+    width: 48%;
 }
 
 .mat-column-edit {
@@ -54,3 +54,21 @@ mat-footer-row,
     justify-content: center !important;
 }
 
+.btn-ali {
+  
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-edit {
+        padding: 10px;
+
+        .btn-alicorp {
+            margin-bottom: 15px;
+        }
+
+        .btn-ali {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,29 +1,57 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3 mt-5">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3>Agregar Item</h3>
-                    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
-                        <div class="mb-3">
-
-                            <input type="text" formControlName="name" class="form-control" placeholder="Nombre"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-
-                            <input type="text" formControlName="description" class="form-control"
-                                placeholder="Descripcion" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <button mat-raised-button class="btn-alicorp" type="submit"
-                                [disabled]="!itemForm.valid">Agregar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- <div class="row">
+    <div class="col-lg-6 offset-lg-3 mt-5"> -->
+<div class="title">
+    <h3 mat-dialog-title class="text-left mb-0">Agregar Item</h3>
 </div>
+<div class="modal-btn-close " style="margin-top:-35px;float: right;">
+    <button mat-icon-button color="" [mat-dialog-close]="" aria-label="Example icon-button with a heart icon"
+        style="z-index: 9; color: white;">
+        <mat-icon (click)="close()">close</mat-icon>
+    </button>
+</div>
+<form [formGroup]="itemForm" class="mt-5">
+    <div mat-dialog-content>
+        <!-- <p>What's your favorite animal?</p> -->
+
+        <mat-form-field class="full-width px-5">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name">
+            <!-- <input matInput [(ngModel)]="item.name"> -->
+        </mat-form-field>
+        <br>
+        <mat-form-field class="full-width px-5">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+            <!-- <input matInput [(ngModel)]="item.description"> -->
+        </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button class="mx-auto btn-alicorp" (click)="onSubmit()" [disabled]="!itemForm.valid"
+            cdkFocusInitial>Agregar</button>
+    </div>
+</form>
+<!-- </div>
+</div> -->
+
+<!-- <div class="text-center">
+    <div class="card-body">
+        <h3>Agregar Item</h3>
+        <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+
+                <input type="text" formControlName="name" class="form-control" placeholder="Nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <textarea formControlName="description" class="form-control" placeholder="Descripcion"
+                    required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <button mat-raised-button class="btn-alicorp" type="submit"
+                    [disabled]="!itemForm.valid">Agregar</button>
+            </div>
+        </form>
+    </div>
+</div> -->
