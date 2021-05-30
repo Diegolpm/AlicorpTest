@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "alicorp-test-5268c": {
+      "hosting": {
+        "AlicorpTest": [
+          "alicorp-test-5268c"
+        ]
+      }
+    }
+  }
+}

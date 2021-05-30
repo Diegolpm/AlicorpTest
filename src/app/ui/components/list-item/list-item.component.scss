@@ -1,0 +1,56 @@
+.demo-table {
+    width: 100%;
+}
+
+.mat-header-cell {
+    color: black;
+    // font-weight: bold;
+    font-size: 15px;
+}
+
+.mat-table thead,
+.mat-table tbody,
+.mat-table tfoot,
+mat-header-row,
+mat-row,
+mat-footer-row,
+[mat-header-row],
+[mat-row],
+[mat-footer-row],
+.mat-table-sticky {
+    border-top: 1px solid currentColor;
+}
+
+.mat-column-code,
+.mat-column-name,
+.mat-column-description,
+.mat-column-edit {
+    // width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: left;
+    border-bottom: 1px solid currentColor;
+}
+
+.mat-column-code {
+    border-left: 1px solid currentColor;
+}
+
+.mat-column-name,
+.mat-column-description {
+    padding-left: 16px;
+}
+
+.mat-column-description {
+    // font-style: italic;
+}
+
+.mat-column-edit {
+    // width: 32px;
+    text-align: center;
+}
+
+::ng-deep .mat-paginator-container {
+    justify-content: center !important;
+}
+

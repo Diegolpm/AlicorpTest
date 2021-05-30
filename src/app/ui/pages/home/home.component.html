@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row mt-50">
+        <h1 class="text-center mb-0 fw-bold">{{title | uppercase}}</h1>
+        <h1 class="text-center fw-bold">{{org | uppercase}}</h1>
+    </div>
+    <div class="row">
+        <div class="btn-create">
+            <button mat-raised-button (click)="createItem()" class="float-end btn-ali">Agregar</button>
+        </div>
+    </div>
+    <app-list-item></app-list-item>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 mt-5">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Agregar Item</h3>
+                    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
+                        <div class="mb-3">
+
+                            <input type="text" formControlName="name" class="form-control" placeholder="Nombre"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+
+                            <input type="text" formControlName="description" class="form-control"
+                                placeholder="Descripcion" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <button mat-raised-button class="btn-alicorp" type="submit"
+                                [disabled]="!itemForm.valid">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
