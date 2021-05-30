@@ -23,6 +23,12 @@ body {
     background-color: #ed1b2f;
 }
 
+.btn-ali {
+    background-color: transparent;
+    border: 1px solid #ed1b2f !important;
+    color: #ed1b2f;
+}
+
 .mat-progress-spinner::ng-deep circle {
     stroke: #ed1b2f !important;
 }
@@ -46,5 +52,32 @@ body {
         background-image: none;
         background-color: #e9e9e9;
         color: red;
+    }
+}
+
+::ng-deep .mat-dialog-container {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: inherit;
+}
+
+.margin-dialog {
+    margin-top: 25px;
+    margin-right: 0;
+    margin-left: 0;
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.title {
+    border-bottom: 1px solid #ed1b2f;
+    padding: 5px 15px 0 15px;
+    background-color: #ed1b2f;
+
+    h3 {
+        color: #ffff;
     }
 }

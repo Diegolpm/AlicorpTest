@@ -25,6 +25,7 @@
             <td mat-cell *matCellDef="let element">
                 <div class="btn-edit">
                     <button mat-raised-button class="btn-alicorp" (click)="deleteItem(element.key)">Delete</button>
+                    <button mat-raised-button class="btn-ali ms-3" (click)="editItem(element)">Edit</button>
                 </div>
             </td>
         </ng-container>

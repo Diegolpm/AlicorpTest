@@ -7,6 +7,7 @@ import { ItemsService } from 'src/app/data/services/items.service';
 import { ConfirmComponent } from '../../modals/confirm/confirm.component';
 import { map } from 'rxjs/operators';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { EditItemComponent } from '../edit-item/edit-item.component';
 
 @Component({
   selector: 'app-list-item',
@@ -82,6 +83,21 @@ export class ListItemComponent implements OnInit, AfterViewInit {
   handlePage(e: PageEvent){
     this.page_size = e.pageSize;
     this.page_number = e.pageIndex + 1;
+  }
+
+  editItem(item) {
+    // console.log(key)
+    const dialogRef = this.dialog.open(EditItemComponent, {
+      width: '500px',
+      height: '300px',
+      data: {
+        item: item
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 

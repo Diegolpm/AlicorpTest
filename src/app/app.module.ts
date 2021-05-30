@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from './ui/common/footer/footer.component';
 import { PaginatePipe } from './ui/common/pipes/paginate.pipe';
+import { EditItemComponent } from './ui/components/edit-item/edit-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PaginatePipe } from './ui/common/pipes/paginate.pipe';
     ListItemComponent,
     ConfirmComponent,
     FooterComponent,
-    PaginatePipe
+    PaginatePipe,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,
