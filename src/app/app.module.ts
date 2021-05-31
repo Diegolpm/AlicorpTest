@@ -21,6 +21,7 @@ import { FooterComponent } from './ui/common/footer/footer.component';
 import { PaginatePipe } from './ui/common/pipes/paginate.pipe';
 import { EditItemComponent } from './ui/components/edit-item/edit-item.component';
 import { DeleteItemComponent } from './ui/components/delete-item/delete-item.component';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,10 @@ import { DeleteItemComponent } from './ui/components/delete-item/delete-item.com
     NgxPaginationModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
