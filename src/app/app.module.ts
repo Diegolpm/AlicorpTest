@@ -48,6 +48,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
     ToastrModule.forRoot(),
   ],
   providers: [
+    ItemsService,
     { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }
   ],

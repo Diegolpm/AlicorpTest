@@ -19,12 +19,12 @@ export class ItemsService {
     // .then(response => { console.log(response) }, error => console.log(error));
   }
 
-  updateItem(key: string, value: any): Promise<void> {
-    return this.itemsRef.doc(key).update(value);
+  updateItem(id: string, value: any): Promise<void> {
+    return this.itemsRef.doc(id).update(value);
   }
 
-  deleteItem(key: string): Promise<void> {
-    return this.itemsRef.doc(key).delete();
+  deleteItem(id: string): Promise<void> {
+    return this.itemsRef.doc(id).delete();
   }
 
   getItemsList(): AngularFirestoreCollection<Item> {

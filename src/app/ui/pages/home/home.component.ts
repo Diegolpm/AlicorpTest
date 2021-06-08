@@ -11,22 +11,12 @@ export class HomeComponent implements OnInit {
   title: string;
   org: string;
 
-  displayedColumns: string[] = ['codigo', 'nombre', 'descripcion', 'acción'];
-
-  constructor(
-    public router: Router,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.title = 'Listado Test';
     this.org = 'Alicorp';
 
   }
-
-
-  createItem() {
-    this.router.navigate(['crear-item']);
-  }
- 
 
 }
