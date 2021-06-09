@@ -87,3 +87,7 @@ body {
         color: #ffff;
     }
 }
+
+.spinner-color circle {
+    stroke: $color-primary;
+}
